@@ -1,0 +1,277 @@
+/* GLOBAL */
+html{
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+
+    color: #000;
+    background-color: #fff;
+}
+
+/* img{
+    max-width: 100%;
+    height: auto;
+} */
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__btn{
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 8px 18px;
+    display: inline-block;
+}
+
+.news__btn{
+    font-family: 'Bebas Neue', cursive;
+    color: red;
+    text-transform: uppercase;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 8px 18px;
+    display: block;
+
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* HEADER */
+.header{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-logo__link{
+    height: 50px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.sitenav__list{
+    display: flex;
+}
+
+.sitenav__item:not(:last-child){
+    margin-right: 24px;
+}
+.sitenav__link{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* MAIN-CONTENT */
+.main-content{
+    flex-grow: 1;
+}
+
+/* HERO */
+.hero{
+    background-image: url(../images/uzbekistan.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.hero__content{
+    text-align: center;
+}
+.hero__title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    color: #fff;
+}
+
+/* NEWS */
+.news{
+    padding: 48px 0;
+}
+.news__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__item{
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    width: 350px;
+}
+
+.news__img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.news__title,
+.regions__title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.news__content-title{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin: 12px 0;
+}
+
+.diversion{
+    margin-bottom: 24px;
+    border-style: none;
+    border: 1px solid rgb(171, 171, 171);
+}
+
+
+/* ASIDE */
+.aside{
+    padding: 24px;
+    background-image: url(../images/Qala.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+/* REGIONS */
+.regions{
+    padding: 48px;
+}
+
+.regions__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.region:not(:last-child){
+    width: 300px;
+    border-right: 1px solid rgb(171, 171, 171);
+}
+.region__item{
+    margin-bottom: 8px;
+}
+
+.region__link{
+    font-family: 'Bebas Neue', cursive; 
+    font-size: 24px;
+    color: #222;
+}
+
+/* SOCIALS */
+.socials{
+    background-image: url(../images/Naqsh.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.socials__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials__title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    color: #fff;
+}
+
+.socials__list{
+    display: flex;
+}
+
+.socials__img{
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+/* FOOTER */
+.footer{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #222;
+}
+
+.footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer a{
+    color: #fff;
+}
+
+
+
