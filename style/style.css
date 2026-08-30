@@ -1,298 +1,243 @@
-/* GLOBAL */
-html{
-    box-sizing: border-box;
+/* GLOBAL STYLES*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
     height: 100%;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    font-family: "Roboto", sans-serif;
+body {
+    color: #000;
+    font-size: 1rem;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.5px;
-
-    color: #000;
     background-color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-/* img{
-    max-width: 100%;
-    height: auto;
-} */
-
-li{
-    list-style: none;
-}
-
-a{
-    color: #000;
-    text-decoration: none;
-}
-
-/* CONTAINER */
-.container{
+.container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero__btn{
-    font-family: 'Bebas Neue', cursive;
-    color: #fff;
-    text-transform: uppercase;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    padding: 8px 18px;
-    display: inline-block;
-}
-
-.news__btn{
-    font-family: 'Bebas Neue', cursive;
-    color: red;
-    text-transform: uppercase;
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 8px 18px;
-    display: block;
-
-    text-align: center;
-    margin-top: 16px;
-    transition: all .3s ease-in;
-}
-
-.news__btn:hover{
-    color: #000;
-    border-color: #000;
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 /* VISUALLY-HIDDEN */
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
 }
 
 /* HEADER */
-.header{
-    padding-top: 12px;
-    padding-bottom: 12px;
+.header {
+    height: 20vh;
+    padding: 1rem 0; 
 }
 
-.header__container{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.site-logo__link{
-    height: 50px;
-    object-fit: cover;
-    display: inline-block;
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #000;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-.sitenav__list{
+.logo__img {
+    display: flex;
+    margin-right: 8px;
+}
+
+.nav__list { display: flex; }
+
+.nav__item:not(:last-child) { margin-right: 1.5rem; }
+
+.nav__link {
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.nav__link:hover, .logo:hover { color: #cc1616; }
+
+/* HERO SECTION */
+.hero {
+    background-image: url(../images/uzbekistan.jpg);
+    background-position: top;
+    background-size: cover;
+    text-align: center;
+    
+    height: 80vh;
     display: flex;
 }
 
-.sitenav__item:not(:last-child){
-    margin-right: 24px;
-}
-.sitenav__link{
-    font-size: 24px;
-    text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
-    transition: all .3s ease-in;
+.hero__title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #cc1616;
 }
 
-.sitenav__link:hover{
-    color: red;
+.btn__hero {
+    color: #cc1616;
+    border: 1px solid #cc1616;
 }
 
-/* MAIN-CONTENT */
-.main-content{
-    flex-grow: 1;
+.btn__hero:hover { padding: 12px 20px; }
+
+/* NEWS SECTION */
+.news {
+    height: 100vh;
+    padding: 3rem 0;
+    background-color: #fff;
 }
 
-/* HERO */
-.hero{
-    background-image: url(../images/uzbekistan.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 48px;
-    padding-bottom: 48px;
+.news__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.hero__content{
-    text-align: center;
-}
-.hero__title{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 60px;
-    color: #fff;
-}
-
-/* NEWS */
-.news{
-    padding: 48px 0;
-}
-.news__list{
+.card__list {
     display: flex;
     justify-content: space-between;
 }
 
-.news__item{
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px;
+.card__item {
     width: 350px;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.news__img{
+.card__img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px;
-    display: inline-block;
+    border-radius: 8px;
 }
 
-.news__title,
-.regions__title{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 32px;
-    margin-bottom: 24px;
-}
-
-.news__content-title{
+.card__title {
+    margin: 0.75rem 0;
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    margin: 12px 0;
 }
 
-.diversion{
-    margin-bottom: 24px;
-    border-style: none;
-    border: 1px solid rgb(171, 171, 171);
+.card__text {
+    margin-bottom: 1rem;
+    font-family: "Roboto", 'Helvetica', sans-serif;
 }
 
+.btn__card  {
+    color: #000;
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.btn__card:hover {
+    color: #cc1616;
+    border-color: #cc1616;
+}
 
 /* ASIDE */
-.aside{
-    padding: 24px;
-    background-image: url(../images/Qala.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.aside {
+    height: 50vh;
+    padding: 1.5rem 0;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/qala.jpg);
 }
 
-/* REGIONS */
-.regions{
-    padding: 48px;
+/* REGIONS SECTION */
+.regions {
+    height: 50vh;
+    padding: 1.5rem 0;
 }
 
-.regions__wrapper{
+.regions__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.regions__wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.region:not(:last-child){
-    width: 300px;
-    border-right: 1px solid rgb(171, 171, 171);
-}
-.region__item{
-    margin-bottom: 8px;
-}
+.regions__list { width: 300px; }
 
-.region__link{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 24px;
+.regions__list:not(:last-child) { border-right: 1px solid #999; }
+
+.regions__link {
     color: #222;
-    transition: all .3s ease-in;
+    line-height: 2;
 }
 
-.region__link:hover{
-    color: red;
-    font-size: 28px;
+.regions__link:hover{
+    color: #cc1616;
     text-decoration: underline;
 }
 
-/* SOCIALS */
-.socials{
-    background-image: url(../images/Naqsh.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.diversion {
+    margin-bottom: 1.5rem;
+    border: 1px solid #999;
+}
+
+/* SOCIALS SECTION */
+.socials {
+    height: 50vh;
+    padding-top: 5rem;
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    background-size: cover;
+    background-image: url(../images/naqsh.jpg);
 }
 
-.socials__content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.socials__title{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 48px;
+.socials__title {
     color: #fff;
+    font-size: 4rem;
 }
 
-.socials__list{
-    display: flex;
-}
-
-.social__img{
-    width: 48px;
-    height: 48px;
-    display: inline-block;
-    transition: all .3s ease-in;
-}
-
-.social__img:hover{
-    width: 64px;
-    height: 64px;
+.social__img:hover {
+    width: 56px;
+    height: 56px;
 }
 
 /* FOOTER */
-.footer{
-    padding-top: 12px;
-    padding-bottom: 12px;
+.footer {
+    padding: 1rem 0;
     background-color: #222;
 }
 
-.footer__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.footer .logo, .footer .nav__link { color: #fff; }
 
-.footer a{
-    color: #fff;
-}
+.footer .nav__link:hover, .footer .logo:hover { color: #cc1616; }
